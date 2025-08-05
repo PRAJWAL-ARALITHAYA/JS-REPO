@@ -1,5 +1,5 @@
 let name= new String("       prajwal krishna aralithaya      ")
-console.log(name.trim().split(' '))
+const(name.trim().split(' '))
 // like python trim and split is used in js
 const age=19
 const college=new String("SIT")
