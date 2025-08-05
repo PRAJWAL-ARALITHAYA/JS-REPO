@@ -1,5 +1,5 @@
 let name= new String("       prajwal krishna aralithaya      ")
-const(name.trim().split(' '))
+console.log(name.trim().split(' '))
 // like python trim and split is used in js
 const age=19
 const college=new String("SIT")
@@ -8,4 +8,4 @@ const new_name=name.replaceAll('a','u');
 console.log(new_name);
 // replace() just replace one instance at the same time replaceAll() replace all instances!!
 let word=new String("harry")
-console.log(`the word "${word}" ${sentence.includes(word)?"is":"is not"} in the sentence`)
+console.log(`the word ${word} ${sentence.includes(word)?"is":"is not"} in the sentence`)
