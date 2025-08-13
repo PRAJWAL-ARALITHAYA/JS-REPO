@@ -9,3 +9,4 @@
 // console.log(Array.isArray(1));
 let score=Array.of([1,2,3,4],(x)=>Math.pow(x,x));
 console.log(score);;
+console.log("hello");
