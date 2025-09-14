@@ -15,8 +15,18 @@
       <div class="day">Saturday</div>
       <div class="day">Sunday</div>
     </div>
+    <ul class="languages">
+      <li class = 'languages'>C++</li>
+    </ul>
   </body>
+  
+  </style>
   <script>
+    document.body.style.backgroundColor = "#212121";
+    document.body.style.color = "#fff";
+    const list = document.querySelector('.languages');
+    list.style.border = "2px solid white";
+    list.style.padding ="10px";
     const Parent = document.querySelector(".parent");
     for (let i = 0; i < Parent.children.length; i++) {
       console.log(Parent.children[i]);
@@ -56,5 +66,28 @@
 
     childDiv.appendChild(text);
     document.body.appendChild(div);
+
+    function addLanguages(LangName) {
+      const li = document.createElement("li");
+      li.innerHTML = LangName;
+      document.querySelector(".languages").appendChild(li);
+    }
+    function addLanguagesOptimal(LangName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(LangName));
+      document.querySelector(".languages").appendChild(li);
+    }
+    addLanguages("Python");
+    addLanguages("JavaScript");
+    const array = ["TypeScript", "Java", "ruby", "Rust"];
+    array.forEach((item) => addLanguagesOptimal(item));
+
+    const FirstLang = document.querySelector("li:nth-child(2)");
+
+    FirstLang.innerHTML ="Python";
+    const secondLang = document.querySelector('li:first-child');
+    const lastlang = document.querySelector('li:last-child');
+    lastlang.remove();
+
   </script>
 </html>
