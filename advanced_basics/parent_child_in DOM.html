@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parent child relation</title>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+      <div class="day">Friday</div>
+      <div class="day">Saturday</div>
+      <div class="day">Sunday</div>
+    </div>
+  </body>
+  <script>
+    const Parent = document.querySelector(".parent");
+    for (let i = 0; i < Parent.children.length; i++) {
+      console.log(Parent.children[i]);
+      document.writeln(`${Parent.children[i].innerHTML}\n`);
+    }
+    const child = document.querySelector(".day");
+    console.log(child);
+    console.log(child.parentElement);
+    //console.log(child.);
+    console.log(Parent.childElementCount);
+    const keys = Parent.childNodes.keys();
+    for (let key of keys) document.writeln(key);
+
+    const div = document.createElement("div");
+    div.className = "newClass";
+    div.id = "newId";
+    div.setAttribute("title", "newTitle");
+    div.style.backgroundColor = "yellow";
+    div.style.color = "red";
+    div.style.border = " 2px solid black";
+    div.style.padding = "10px";
+    div.style.borderRadius = "10px";
+    div.style.margin = "100px";
+    div.style.textAlign = "center";
+    const addText = document.createTextNode("Prajwal learning javaScript");
+    div.appendChild(addText);
+
+    const childDiv = document.createElement("div");
+    childDiv.style.backgroundColor = "white";
+    childDiv.style.border = "2px solid black";
+    childDiv.style.borderRadius = "10px";
+    childDiv.style.padding = "10px";
+    childDiv.style.margin = "10px";
+    childDiv.style.textAlign = "left";
+    div.appendChild(childDiv);
+    const text = document.createTextNode("I am the inner div");
+
+    childDiv.appendChild(text);
+    document.body.appendChild(div);
+  </script>
+</html>
