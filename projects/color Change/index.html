@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Change</title>
+  </head>
+  <body>
+    <h2><b>Color Scheme Switcher</b></h2>
+    <div class="buttons">
+      <div>
+        <button class="button" id="grey"></button>
+      </div>
+      <div>
+        <button class="button" id="yellow"></button>
+      </div>
+      <br />
+      <div>
+        <button class="button" id="red"></button>
+      </div>
+      <div>
+        <button class="button" id="blue"></button>
+      </div>
+    </div>
+  </body>
+  <script>
+    const but = document.getElementsByClassName("button");
+    Array.from(but).forEach((button) => {
+      button.style.width = "150px";
+      button.style.height = "100px";
+      button.style.margin = "10px";
+    });
+    document.querySelector(".buttons").style.display = "flex";
+    document.querySelector(".buttons").style.display = "grid";
+    const grey = document.getElementById("grey");
+    const yellow = document.getElementById("yellow");
+    const blue = document.getElementById("blue");
+    const red = document.getElementById("red");
+    grey.style.backgroundColor = "grey";
+    yellow.style.backgroundColor = "yellow";
+    red.style.backgroundColor = "red";
+    blue.style.backgroundColor = "blue";
+
+    const body = document.querySelector("body");
+    Array.from(but).forEach(function (button) {
+      button.addEventListener("click", function () {
+        body.style.backgroundColor = button.id;
+      });
+    });
+  </script>
+</html>
