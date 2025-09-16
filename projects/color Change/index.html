@@ -43,7 +43,7 @@
 
     const body = document.querySelector("body");
     Array.from(but).forEach(function (button) {
-      button.addEventListener("click", function () {
+      button.addEventListener("click", () => {
         body.style.backgroundColor = button.id;
       });
     });
