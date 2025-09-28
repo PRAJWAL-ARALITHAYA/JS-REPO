@@ -4,21 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess The Number</title>
+    <script src="script.js" defer></script>
   </head>
-  <body>
+  <body class="preload">
     <div class="container">
       <div class="box"></div>
       <h2 id="heading">Guess The Number</h2>
       <form>
-        <input type="number" id="number" />
+        <input type="text" id="number" />
+        <br />
         <input type="submit" id="subt" />
       </form>
       <div class="results">
-        <p>Previous Guesses:<span id="previos"></span></p>
-        <p>Guesses Remaining<span id="Remaining"></span></p>
-        <p id="lowOrHi"></p>
+        <p>Previous Guesses:<span id="previous"></span></p>
+        <p>Guesses Remaining: <span id="Remaining">10</span></p>
+        <p id="lowOrHigh"></p>
       </div>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
