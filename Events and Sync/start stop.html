@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Start</title>
+  </head>
+  <body>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+  </body>
+  <style>
+    button {
+      border: 2px solid cyan;
+      border-radius: 5px;
+      height: 50px;
+      width: 50px;
+      padding: 10px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      background-color: rgb(168, 132, 172);
+    }
+  </style>
+  <script>
+    const start = document.getElementById("start");
+    const stop = document.querySelector("#stop");
+    let starting;
+    start.addEventListener("click", function () {
+      starting = setInterval(function () {
+        console.log("hello");
+      }, 5000);
+    });
+    stop.addEventListener("click", function () {
+      clearInterval(starting);
+    });
+  </script>
+</html>

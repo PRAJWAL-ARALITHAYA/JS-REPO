@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Shop</title>
+  </head>
+  <body>
+    <div id="container">
+      <img src="https://images.pexels.com/photos/33570548/pexels-photo-33570548.jpeg" alt="leopard" id="leopard" height="150px" width="150px " />
+      <br />
+      <img src="https://images.pexels.com/photos/33572696/pexels-photo-33572696.jpeg" alt="budha" id="budha" height="150px" width="150px" />
+      <br />
+      <img src="https://images.pexels.com/photos/13635192/pexels-photo-13635192.jpeg" alt="mountain" id="mountain" height="150px" width="150px" />
+      <br />
+      <img src="https://images.pexels.com/photos/32245917/pexels-photo-32245917.jpeg" alt="sea" id="sea" height="150px" width="150px" />
+      <br />
+
+      <a href="https://google.com">Google</a>
+    </div>
+    <style>
+      body {
+        background-color: #757575;
+      }
+      img {
+        border: 4px solid white;
+      }
+      a {
+        color: azure;
+      }
+    </style>
+    <script>
+      document.querySelector("a").addEventListener(
+        "click",
+        function (e) {
+          e.preventDefault();
+        },
+        false
+      );
+      document.getElementById("container").addEventListener(
+        "click",
+        function (e) {
+          //   e.target.parentNode.removeChild(e.target);
+          e.target.remove();
+        },
+        false
+      );
+    </script>
+  </body>
+</html>
