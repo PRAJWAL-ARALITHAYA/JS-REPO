@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyboard Magic</title>
+  </head>
+  <body>
+    <div id="insert"><h2>Enter any key to get know about it</h2></div>
+  </body>
+  <style>
+    body {
+      text-align: center;
+      background-color: rgb(144, 82, 39);
+      color: antiquewhite;
+    }
+    div {
+      margin: 550px;
+      margin-top: 250px;
+    }
+  </style>
+  <script>
+    let insert = document.getElementById("insert");
+    window.addEventListener("keydown", function (e) {
+      e.preventDefault();
+      insert.innerHTML = `<table>
+  <tr>
+    <th>key</th>
+    <th>Key Code</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key === " " ? "space" : e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+  
+</table>`;
+    });
+  </script>
+</html>
